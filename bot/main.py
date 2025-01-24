@@ -15,7 +15,7 @@ def send_welcome(message):
 
 @bot.message_handler(func=lambda message: True)
 def ans(message):
-    bot.reply_to(message, coordinator.get_ans_message_user(message.text))
+    bot.reply_to(message, coordinator.get_ans_message_user(message.text[:4000]))
 
 
 bot.infinity_polling()
